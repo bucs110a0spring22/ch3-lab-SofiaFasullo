@@ -17,8 +17,12 @@ leonardo.up()
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
-## 5. your code goes here
-
+run1 = random.randrange(0,100)   ## 5. your code goes here
+run2 = random.randrange(0,100)
+michelangelo.down()
+leonardo.down()
+michelangelo.forward(run1)
+leonardo.forward(run2)
 
 # Part B - complete part B here
 
