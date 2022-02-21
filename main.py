@@ -25,18 +25,41 @@ def simple_race(runner = michelangelo):
   runner.forward(distance_ran)
   runner.up()
 
-simple_race(michelangelo)
-simple_race(leonardo)
+#simple_race(michelangelo)
+#simple_race(leonardo)
 
 def restart_race():
-  michelangelo.up()
-  leonardo.up()
   michelangelo.goto(-100,20)
   leonardo.goto(-100,-20)
+  michelangelo.clear()
+  leonardo.clear()
 
-restart_race()
+#restart_race()
+
+#part b
+
+def realistic_race(runner1 = michelangelo, runner2 = leonardo):
+ runner1.down()
+ runner2.down()
+ for i in range(0,10):
+   stride1 = random.randrange(0,10)
+   stride2 = random.randrange(0,10)
+   runner1.forward(stride1)
+   runner2.forward(stride2)
+
+#realistic_race()
+#restart_race()
+
+ for i in range(0,10):
+   stride1 = random.randrange(0,10)
+   stride2 = random.randrange(0,10)
+   print(stride1)
+   print(stride2)
 
 # Part B - complete part B here
-
-
 window.exitonclick()
+# for i in range(0,10):
+  #  stride1 = random.randrange(0,10)
+  #  runner1.forward(stride1)
+  #  stride2 = random.randrange(0,10)
+  #  runner2.forward(stride1)
