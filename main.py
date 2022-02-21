@@ -17,12 +17,24 @@ leonardo.up()
 michelangelo.goto(-100,20)
 leonardo.goto(-100,-20)
 
-run1 = random.randrange(0,100)   ## 5. your code goes here
-run2 = random.randrange(0,100)
-michelangelo.down()
-leonardo.down()
-michelangelo.forward(run1)
-leonardo.forward(run2)
+## 5. your code goes here
+
+def simple_race(runner = michelangelo):
+  distance_ran = random.randrange(0,100)
+  runner.down()
+  runner.forward(distance_ran)
+  runner.up()
+
+simple_race(michelangelo)
+simple_race(leonardo)
+
+def restart_race():
+  michelangelo.up()
+  leonardo.up()
+  michelangelo.goto(-100,20)
+  leonardo.goto(-100,-20)
+
+restart_race()
 
 # Part B - complete part B here
 
