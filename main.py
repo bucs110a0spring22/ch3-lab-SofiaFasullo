@@ -25,8 +25,9 @@ def simple_race(runner = michelangelo):
   runner.forward(distance_ran)
   runner.up()
 
-#simple_race(michelangelo)
-#simple_race(leonardo)
+
+simple_race(michelangelo)
+simple_race(leonardo)
 
 def restart_race():
   michelangelo.goto(-100,20)
@@ -34,7 +35,7 @@ def restart_race():
   michelangelo.clear()
   leonardo.clear()
 
-#restart_race()
+restart_race()
 
 #part b
 
@@ -50,10 +51,23 @@ def realistic_race(runner1 = michelangelo, runner2 = leonardo):
 realistic_race()
 restart_race()
 
+
 # Part B - complete part B here
+
+def draw_shapes(num_sides=4):
+  for i in range(1,num_sides+1):
+    leonardo.down()
+    leonardo.forward(10)
+    leonardo.left(360/num_sides)
+  leonardo.up()
+  leonardo.forward(5*num_sides)
+  leonardo.clear()
+
+draw_shapes(4)
+draw_shapes(6)
+draw_shapes(9)
+draw_shapes(12) 
+
+restart_race()
+
 window.exitonclick()
-# for i in range(0,10):
-  #  stride1 = random.randrange(0,10)
-  #  runner1.forward(stride1)
-  #  stride2 = random.randrange(0,10)
-  #  runner2.forward(stride1)
