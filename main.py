@@ -41,20 +41,14 @@ def restart_race():
 def realistic_race(runner1 = michelangelo, runner2 = leonardo):
  runner1.down()
  runner2.down()
- for i in range(0,10):
+ for i in range(1,11):
    stride1 = random.randrange(0,10)
    stride2 = random.randrange(0,10)
    runner1.forward(stride1)
    runner2.forward(stride2)
 
-#realistic_race()
-#restart_race()
-
- for i in range(0,10):
-   stride1 = random.randrange(0,10)
-   stride2 = random.randrange(0,10)
-   print(stride1)
-   print(stride2)
+realistic_race()
+restart_race()
 
 # Part B - complete part B here
 window.exitonclick()
